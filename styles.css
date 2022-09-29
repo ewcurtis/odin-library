@@ -1,0 +1,35 @@
+body {
+    background-color: #0096a3;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input {
+    border-radius: 10px;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.popup-form {
+    position: fixed;
+    background-color: white;
+    width: 16rem;
+    height: 16rem;
+    box-shadow: 5px 5px 30px rgba(10, 20, 20, 0.15), -30px 0 10px rgba(10, 20, 20, 0.25);
+    padding: 2rem;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
