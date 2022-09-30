@@ -11,23 +11,23 @@
 <body>
     <div class="content">
         <div class="popup-form">
-            <form class="form-container">
+            <form action="#" class="form-container" method="post">
                 <div>
                     <label for="title">Title </label>
                     <div>
-                        <input id="title" name="title">
+                        <input id="title" name="title" maxlength="255" required>
                     </div>
                 </div>
                 <div>
                     <label for="author">Author </label>
                     <div>
-                        <input id="author" name="author">
+                        <input id="author" name="author" maxlength="256" required>
                     </div>
                 </div>
                 <div>
                     <label for="pages">Pages </label>
                     <div>
-                        <input id="pages" name="pages">
+                        <input type="number" id="pages" name="pages" max="10000" required>
                     </div>
                 </div>
                 <div>
@@ -38,7 +38,8 @@
             </form>
         </div>
         <header>
-            <button id="add-book">Add new book</button>
+            <h1>Book collection</h1>
+            <button id="add-book"> Add new book</button>
         </header>
         
         <div class="dashboard"></div>
