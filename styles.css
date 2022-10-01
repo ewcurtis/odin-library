@@ -28,8 +28,13 @@ input {
 }
 
 /*This class will be added to the body whenever the popup-form comes up*/
+.background {
+    background: rgba(0,141,153, 0.5)
+}
+
+/*This will keep the opacity of the popup*/
 .popup-background {
-    opacity: 0.5;
+    opacity: 1 !important;
 }
 
 .content {
@@ -47,6 +52,7 @@ input {
     box-shadow: 5px 5px 10px rgba(10, 20, 20, 0.5), -5px -5px 10px rgba(10, 20, 20, 0.5);
     padding: 2rem;
     margin: 1rem 0;
+
 
 }
 
