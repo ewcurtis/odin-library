@@ -20,7 +20,24 @@ function Book(title, author, pages, read=false) {
 }
 
 function addBookToLibrary() {
-    
+    let book = new Book(ftitle.value, fauthor.value, fpages.value, fread.checked);
+        myLibrary.push(book);
+
+}
+
+//Displays all books in html dashboard
+function displayLibrary() {
+
+}
+
+//Generates book in html dashboard
+function displayBook() {
+
+}
+
+//Removes book from myLibrary and html Dashboard
+function removeBook() {
+
 }
 
 bookBtn.addEventListener("click", e => {
@@ -29,15 +46,26 @@ bookBtn.addEventListener("click", e => {
 
 });
 
+//Creates new book and adds it to the dashboard in html and the myLibrary array in js
 newBook.addEventListener("click", e => {
-    form.style.cssText = "display: none";
-    body.removeAttribute("class", "background");
-    ftitle.value = "";
-    fauthor.value = "";
-    fpages.value = "";
-    fread.checked = false;
+    if (ftitle.checkValidity() && fauthor.checkValidity() && fpages.checkValidity()) {
+        addBookToLibrary();
+        form.style.cssText = "display: none";
+        body.removeAttribute("class", "background");
+        ftitle.value = "";
+        fauthor.value = "";
+        fpages.value = "";
+        fread.checked = false;
+    } else {
+        fpages.reportValidity();
+        fauthor.reportValidity();
+        ftitle.reportValidity();
+        
+    }
+
 });
 
+//cancels creation of a new book
 cancelBook.addEventListener("click", e => {
     form.style.cssText = "display: none";
     body.removeAttribute("class", "background");
