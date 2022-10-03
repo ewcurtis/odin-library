@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    height: max(20vh, 100px);
+    height: max(20vh, 110px);
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -77,6 +77,46 @@ input {
     gap: 1rem;
 }
 
+.book-card {
+    background: rgba(0,100,70,0.6);
+    box-shadow: 5px 5px 10px rgba(10, 20, 20, 0.5), -5px -5px 10px rgba(10, 20, 20, 0.5);
+    width: 16rem;
+    height: 19rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+    color: #5096ff;
+    font-size: 1.2rem;
+    
+    
+}
+
+.book-card div {
+    text-align: center;
+}
+
+.book-card p {
+    overflow-wrap: anywhere;
+    display: inline;
+    padding: 0 0.3rem
+}
+
+.book-card h3 {
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+#delete-book {
+    background: none;
+    border: none;
+    align-self: end;
+    padding: 0.5rem 0;
+}
+
 #add-book {
     padding: 0.5rem;
     background-color: rgba(0,100,70,0.9);
@@ -97,10 +137,4 @@ input {
 #cancel-book {
     padding: 0.5rem;
     background-color: rgb(200,20,20);
-}
-
-@media screen and (max-height: 21rem) {
-    .popup-form {
-        position: absolute;
-    }
 }
