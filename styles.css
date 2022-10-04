@@ -110,11 +110,12 @@ input {
     display: inline;
 }
 
-#delete-book {
+.delete-book {
     background: none;
     border: none;
     align-self: end;
-    padding: 0.5rem 0;
+    padding: 0.1rem;
+    margin: 0.9rem 0.4rem;
 }
 
 #add-book {
