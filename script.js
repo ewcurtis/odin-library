@@ -104,15 +104,30 @@ function displayBook(b) {
     const bookRead = document.createElement("div");
     const readH3 = document.createElement("h3");
     readH3.textContent = "Status:"
-    const readP = document.createElement("p");
+    const readButton = document.createElement("button");
     if (b.read) {
-        readP.textContent = "Finished";
+        readButton.textContent = "Finished";
+        readButton.setAttribute("class", "finished");
     } else {
-        readP.textContent = "In Progress";
+        readButton.textContent = "In Progress";
+        readButton.setAttribute("class", "in-progress");
     }
 
+    //Toggles read status when pushing button
+    readButton.addEventListener("click", e => {
+        if (readButton.getAttribute("class") === "finished") {
+            readButton.removeAttribute("finished");
+            readButton.setAttribute("class", "in-progress");
+            readButton.textContent = "In Progress";
+        } else {
+            readButton.removeAttribute("in-progress");
+            readButton.setAttribute("class", "finished");
+            readButton.textContent = "Finished";
+        }
+    });
+
     bookRead.appendChild(readH3);
-    bookRead.appendChild(readP);
+    bookRead.appendChild(readButton);
 
     //Append all sections to the card
     bookCard.appendChild(deleteBook);

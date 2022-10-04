@@ -46,12 +46,13 @@ input {
 .popup-form {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: rgba(0,141,153, 1);
     width: 16rem;
     height: 20rem;
     box-shadow: 5px 5px 10px rgba(10, 20, 20, 0.5), -5px -5px 10px rgba(10, 20, 20, 0.5);
     padding: 2rem;
     margin: 1rem 0;
+    color: white;
 
 
 }
@@ -75,6 +76,7 @@ input {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 1rem;
+    justify-items: center;
 }
 
 .book-card {
@@ -118,6 +120,23 @@ input {
     margin: 0.9rem 0.4rem;
 }
 
+.in-progress {
+    color: rgba(230,230,250, 0.8);
+    background-color: rgba(80, 150, 255, 0.6);
+}
+
+.finished {
+    color: #5096ff;
+    background: rgba(0,100,70,0.6);
+}
+
+.in-progress, .finished {
+    border-radius: 5px;
+    margin: 0.3rem;
+    font-weight: bold;
+    padding: 0.3rem;
+}
+
 #add-book {
     padding: 0.5rem;
     background-color: rgba(0,100,70,0.9);
@@ -132,10 +151,10 @@ input {
 
 #new-book {
     padding: 0.5rem 3rem;
-    background-color: rgb(20,200,20);
+    background-color: rgba(0,100,70,0.6);;
 }
 
 #cancel-book {
     padding: 0.5rem;
-    background-color: rgb(200,20,20);
+    background-color: rgb(100,20,20);
 }
